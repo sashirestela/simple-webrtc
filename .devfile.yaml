@@ -1,0 +1,30 @@
+schemaVersion: 2.2.0
+metadata:
+  attributes:
+    metadata-name-field: generateName
+    metadata-name-original-value: simple-webrtc
+  name: simple-webrtc
+  namespace: sashirestela-dev
+attributes:
+  che-theia.eclipse.org/sidecar-policy: mergeImage
+projects:
+  - name: simple-webrtc
+    git:
+      remotes:
+        origin: https://github.com/sashirestela/simple-webrtc.git
+components:
+  - name: universal-developer-image
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+      mountSources: true
+      memoryRequest: 2G
+      memoryLimit: 6G
+      cpuRequest: 2000m
+      cpuLimit: 4000m
+  - name: m2
+    volume:
+      size: 8Gi
+commands: []
