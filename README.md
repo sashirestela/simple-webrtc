@@ -42,7 +42,7 @@ This is a minimalist application to demonstrate how to use the [OpenAI WebRTC](h
 
 1. Talk to the AI when you see the media control.
 
-1. In the console you will see all the Realtiem events.
+1. In the console you will see all the Realtime events.
 
 1. Click the "Stop" button to finish the previously started WebRTC session.
 
